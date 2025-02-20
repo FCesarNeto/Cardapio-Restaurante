@@ -1,6 +1,6 @@
 $(document).ready(function () {
     cardapio.eventos.init();
-})
+});
 
 var cardapio = {};
 
@@ -8,9 +8,9 @@ var MEU_CARRINHO = [];
 var MEU_ENDERECO = null;    
 
 var VALOR_CARRINHO = 0;
-var VALOR_ENTREGA = 5;
+var VALOR_ENTREGA = 8;
 
-var CELULAR_EMPRESA = '5514997204110';
+var CELULAR_EMPRESA = '5514997055683';
 
 cardapio.eventos = {
    
@@ -333,25 +333,24 @@ cardapio.metodos = {
         carregarEndereco: () => {
             if (MEU_CARRINHO.length <= 0) {
                 cardapio.metodos.mensagem('Seu carrinho esta vazio.')
-                return;
+                return; 
             }
-
-            cardapio.metodos.carregarEtapa(2);            
+                cardapio.metodos.carregarEtapa(2);
         },
 
         // API viaCEP
         buscarCep: () => {
             
-            //cria a variavel com o valor do cep
-            var cep = $("#txtCEP").val().trim().replace(/\D/g,'');
+         //cria a variavel com o valor do cep
+        var cep = $("#txtCEP").val().trim().replace(/\D/g,'');
             
-            // verifica se o CEP tem o valor informado
-            if (cep != "") {    
+        // verifica se o CEP tem o valor informado
+        if (cep != "") {    
 
-                //Expressao regular para validar CEP
-                var validacep = /^[0-9]{8}$/;
+         //Expressao regular para validar CEP
+         var validacep = /^[0-9]{8}$/;
 
-                if (validacep.test(cep)) {
+         if (validacep.test(cep)) {
 
                     $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
 
@@ -371,27 +370,23 @@ cardapio.metodos = {
                         }
 
                     })
+        }
 
-
-                }
-
-                else {
+        else {
                     cardapio.metodos.mensagem('Formato do CEP inválido.');
                     $("#txtCEP").focus();
                     
+         }
 
-                }
-
-            }
-            else {
+         }
+        else {
                 cardapio.metodos.mensagem('Informe o CEP, por favor.');
                 $("#txtCEP").focus();
             }
         },
-
+        
         // validacao antes de prosseguir para a etapa 3
         resumoPedido: () => {
-
             let cep = $("#txtCEP").val().trim();
             let endereco = $("#txtEndereco").val().trim();
             let bairro = $("#txtBairro").val().trim();
@@ -399,121 +394,129 @@ cardapio.metodos = {
             let uf = $("#ddlUf").val().trim();
             let numero = $("#txtNumero").val().trim();
             let complemento = $("#txtComplemento").val().trim();
-
-            if (cep.length <= 0) {
-                cardapio.metodos.mensagem('Informe o CEP, por favor.');
-                $("#txtCEP").focus();
-                return;
-                
+            let retirarPedido = $("#retirada").is(":checked"); // Agora é booleano (true/false)
+        
+            if (!retirarPedido) {
+                if (!cep) {
+                    cardapio.metodos.mensagem('Informe o CEP, por favor.');
+                    $("#txtCEP").focus();
+                    return;
+                }
+        
+                if (!endereco) {
+                    cardapio.metodos.mensagem('Informe o Endereço, por favor.');
+                    $("#txtEndereco").focus();
+                    return;
+                }
+        
+                if (!bairro) {
+                    cardapio.metodos.mensagem('Informe o Bairro, por favor.');
+                    $("#txtBairro").focus();
+                    return;
+                }
+        
+                if (!cidade) {
+                    cardapio.metodos.mensagem('Informe a Cidade, por favor.');
+                    $("#txtCidade").focus();
+                    return;
+                }
+        
+                if (!uf) {
+                    cardapio.metodos.mensagem('Informe a UF, por favor.');
+                    $("#ddlUf").focus();
+                    return;
+                }
+        
+                if (!numero) {
+                    cardapio.metodos.mensagem('Informe o Número, por favor.');
+                    $("#txtNumero").focus();
+                    return;
+                }
             }
-
-            if (endereco.length <= 0) {
-                cardapio.metodos.mensagem('Informe o Endereco, por favor.');
-                $("#txtEndereco").focus()
-                return;
-            }
-
-            if (bairro.length <= 0) {
-                cardapio.metodos.mensagem('Informe o Bairro, por favor.');
-                $("#txtBaixxo").focus()
-                return;
-            }
-
-            if (cidade.length <= 0) {
-                cardapio.metodos.mensagem('Informe a Cidade, por favor.');
-                $("#txtCidade").focus()
-                return;
-            }
-            
-            if (uf == "-1") {
-                cardapio.metodos.mensagem('Informe a UF, por favor.');
-                $("#ddlUf").focus()
-                return;
-            }
-
-            if (numero.length <= 0) {
-                cardapio.metodos.mensagem('Informe o Numero, por favor.');
-                $("#txtNumero").focus()
-                return;
-            }
-
+        
             MEU_ENDERECO = {
-                cep: cep,
-                endereco: endereco,
-                bairro: bairro,
-                cidade: cidade,
-                uf: uf,
-                numero: numero,
-                complemento: complemento,
-            }
-
+                cep,
+                endereco,
+                bairro,
+                cidade,
+                uf,
+                numero,
+                complemento,
+                retirarPedido, // Agora é booleano (true/false)
+            };
+        
             cardapio.metodos.carregarEtapa(3);
             cardapio.metodos.carregarResumo();
-
         },
-
+        
         // carrega a etapa do resumo do pedido
         carregarResumo: () => {
-
             $('#listaItensResumo').html('');
-
+        
             $.each(MEU_CARRINHO, (i, e) => {
-
                 let temp = cardapio.templates.itemResumo.replace(/\${img}/g, e.img)
                     .replace(/\${nome}/g, e.name)
                     .replace(/\${preco}/g, e.price.toFixed(2).replace('.', ','))
-                    .replace(/\${qntd}/g, e.qntd)
-
-                    $('#listaItensResumo').append(temp);
-
-            })
-
-            $('#resumoEndereco').html(`${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`);
-            $('#cidadeEndereco').html(`${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`)
-
-            cardapio.metodos.finalizarPedido(); 
-
+                    .replace(/\${qntd}/g, e.qntd);
+        
+                $('#listaItensResumo').append(temp);
+            });
+        
+            if (MEU_ENDERECO.retirarPedido) {
+                $('#resumoEndereco').html(`<strong>Vou retirar meu pedido.</strong>`);
+                $('#cidadeEndereco').html('');
+            } else {
+                $('#resumoEndereco').html(`${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`);
+                $('#cidadeEndereco').html(`${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`);
+            }
+        
+            cardapio.metodos.finalizarPedido();
         },
-
+        
         //atualiza o link do botao do WhatsApp
         finalizarPedido: () => {
-
             if (MEU_CARRINHO.length > 0 && MEU_ENDERECO != null) {
-
-                var texto = 'Olá! Gostaria de fazer um pedido:';
+                let totalPedido = VALOR_CARRINHO;
+                if (!MEU_ENDERECO.retirarPedido) {
+                    totalPedido += VALOR_ENTREGA; // Só soma se não for retirada
+                }
+        
+                let texto = 'Olá! Gostaria de fazer um pedido:';
                 texto += `\n*Itens do pedido:*\n\n\${itens}`;
-                texto += '\n*Endereço de entrega:*';
-                texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`;
-                texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
-                texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.', ',')}*`;
-
-                var itens = '';
-
+        
+                if (MEU_ENDERECO.retirarPedido) {
+                    texto += `\n*Vou retirar meu pedido.*`;
+                } else {
+                    texto += `\n*Endereço de entrega:*`;
+                    texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`;
+                    texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
+                }
+        
+                texto += `\n\n*Total: R$ ${totalPedido.toFixed(2).replace('.', ',')}*`;
+        
+                let itens = '';
+        
                 $.each(MEU_CARRINHO, (i, e) => {
-                    
                     itens += `*${e.qntd}x* ${e.name} ....... R$ ${e.price.toFixed(2).replace('.', ',')} \n`;
-
-                    if ((i + 1) == MEU_CARRINHO.length ) {
-
+        
+                    if ((i + 1) == MEU_CARRINHO.length) {
                         texto = texto.replace(/\${itens}/g, itens);
-
-                        console.log(texto)
-
-                        //converte a URL
+        
+                        console.log(texto);
+        
+                        // Converte a URL
                         let encode = encodeURI(texto);
                         let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
-
+        
                         $("#btnEtapaResumo").attr('href', URL);
                     }
-                })
-
+                });
             }
-
         },
-
+        
         // carrega o link do botao reserva
         carregarBotaoReserva: () => {
-            var texto = 'Olá, gostaria de fazer uma *reserva*';
+            var texto = 'Olá, gostaria de fazer um pedido para retirada';
 
             let encode = encodeURI(texto);
             let URL =  `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
@@ -544,7 +547,7 @@ cardapio.metodos = {
         },
 
         carregarBotaoWhatsApp: () => {
-            var texto = 'Olá, gostaria de saber mais sobre o restaurante.*';
+            var texto = 'Olá, gostaria de fazer um pedido.*';
 
             let encode = encodeURI(texto);
             let URL =  `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;

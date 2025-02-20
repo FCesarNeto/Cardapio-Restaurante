@@ -89,87 +89,66 @@ var MENU = {
         {
             "id": "the-gramercy-tavern-burger-4-pack",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
-            "name": "Gramercy Tavern",
+            "name": "HAMBURGUER",
             "dsc": "The Gramercy Tavern Burger - 4 Pack",
             "price": 99
         },
         {
             "id": "shake-shack-shackburger-8-pack",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-8-pack.973a5e26836ea86d7e86a327becea2b0.jpg",
-            "name": "Shake Shack",
+            "name": "X BURGUER",
             "dsc": "Shake Shack ShackBurger® - 8 Pack",
             "price": 49
         },
         {
             "id": "gotts-cheeseburger-kit-for-4",
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
-            "name": "Gott's Roadside",
+            "name": "X SALADA",
             "dsc": "Gott's Complete Cheeseburger Kit for 4",
             "price": 99
         },
         {
             "id": "le-big-matt-kit-for-6",
             "img": "./img/cardapio/burguers/le-big-matt-kit-for-6.1ddae6e382bb3218eeb0fd5247de115a.jpg",
-            "name": "Emmy Squared",
+            "name": "X BACON SALADA",
             "dsc": "Le Big Matt Burger Kit for 6",
             "price": 99
         },
         {
             "id": "shake-shack-shackburger-16-pack",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-16-pack.316f8b09144db65931ea29e34869287a.jpg",
-            "name": "Shake Shack",
+            "name": "X EG",
             "dsc": "Shake Shack Shackburger® - 16 Pack",
             "price": 89
         },
         {
             "id": "21-usda-prime-burgers-pack-of-18-8oz-each",
             "img": "./img/cardapio/burguers/usda-prime-burgers-pack-of-18-8oz-each.274c67f15aa1c0b210dbf51801706670.jpg",
-            "name": "Peter Luger Steak House",
+            "name": "x EG BACON",
             "dsc": "USDA Prime Burgers - Pack of 18 (8oz each)",
             "price": 175.95
         },
         {
             "id": "double-stack-burger-kit-for-4",
             "img": "./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg",
-            "name": "Holeman & Finch",
+            "name": "X EG BACON SALADA",
             "dsc": "Double Stack Burger Kit for 4",
             "price": 79
         },
         {
             "id": "goldbelly-burger-bash-pack",
             "img": "./img/cardapio/burguers/the-burger-bash-package.bd9d12d031865940bbe5faf15f1a62f8.jpg",
-            "name": "Pat LaFrieda Meats",
+            "name": "X TUDO",
             "dsc": "Goldbelly \"Burger Bash\" Pack",
             "price": 109
         },
         {
             "id": "burger-au-poivre-kit-4-pack",
             "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
-            "name": "Raoul's",
+            "name": "X MAIS SABOR",
             "dsc": "Burger Au Poivre Kit - 4 Pack",
             "price": 99
         },
-        {
-            "id": "goldbelly-burger-blend-4-lbs",
-            "img": "./img/cardapio/burguers/goldbelly-burger-blend-1-lb.13a21b66edf7173a59c75c3a6d2f981b.jpg",
-            "name": "Flannery Beef",
-            "dsc": "Goldbelly Burger Blend - 4 lbs.",
-            "price": 79
-        },
-        {
-            "id": "gotts-complete-cheeseburger-kit-for-8",
-            "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-8.092aa049d00286fa1733d720decc782e.jpg",
-            "name": "Gott's Roadside",
-            "dsc": "Gott's Complete Cheeseburger Kit for 8",
-            "price": 149
-        },
-        {
-            "id": "gramercy-tavern-burger-kielbasa-combo",
-            "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-47.jpg",
-            "name": "Gramercy Tavern",
-            "dsc": "Gramercy Tavern Burger + Kielbasa Combo",
-            "price": 149
-        }
     ],
     "sobremesas": [
         {
@@ -347,87 +326,66 @@ var MENU = {
         {
             "id": "2-lou-malnatis-deep-dish-pizzas",
             "img": "./img/cardapio/pizzas/2-lou-malnatis-deep-dish-pizzas.bf0fe065d251a9cca3925b269d443a27.jpg",
-            "name": "Lou Malnati's Pizza",
+            "name": "X FRANGO",
             "dsc": "2 Lou Malnati's Deep Dish Pizzas",
             "price": 67.99
         },
         {
             "id": "23699-choose-your-own-thin-crust-pizza-4-pack",
             "img": "./img/cardapio/pizzas/choose-your-own-thin-crust-pizza-4-pack.b928a2008eab50c65dc87e59b5952190.jpg",
-            "name": "Bartolini's",
+            "name": "X FRANGO SALADA",
             "dsc": "Choose Your Own Thin Crust Pizza - 4 Pack",
             "price": 139
         },
         {
             "id": "choose-your-own-new-haven-style-pizza-6-pack",
             "img": "./img/cardapio/pizzas/choose-your-own-new-haven-style-pizza-6-pack.ab82828afc6172cdd4017556c15e36dd.jpg",
-            "name": "Zuppardi's Apizza",
+            "name": "X FRANGO BACON",
             "dsc": "New Haven-Style Pizza - 6 Pack (Choose Your Own)",
             "price": 79
         },
         {
             "id": "6-lou-malnatis-deep-dish-pizzas",
             "img": "./img/cardapio/pizzas/6-lou-malnatis-deep-dish-pizzas.f59993181da5d295668c8a6fb856055e.jpg",
-            "name": "Lou Malnati's Pizza",
+            "name": "X FRANGO BC SALADA",
             "dsc": "6 Lou Malnati's Deep Dish Pizzas",
             "price": 116.99
         },
         {
             "id": "wood-fired-pizzas-best-seller-4-pack",
             "img": "./img/cardapio/pizzas/wood-fired-pizzas-best-seller-4-pack.1653bb05922ba153ac178f8365d27f6d.jpg",
-            "name": "Pizzeria Bianco",
+            "name": "X FRANGO EGG",
             "dsc": "Wood Fired Pizzas Best Seller - 4 Pack",
             "price": 129
         },
         {
             "id": "236991-choose-your-own-deep-dish-pizza-3-pack",
             "img": "./img/cardapio/pizzas/choose-your-own-deep-dish-pizza-3-pack.4111791511244a4946bb5c9ad2c17da9.jpg",
-            "name": "Bartolini's",
+            "name": "X FRANGO EGG SALADA",
             "dsc": "Choose Your Own Deep Dish Pizza - 3 Pack",
             "price": 139
         },
         {
             "id": "choose-your-own-detroit-style-pizza-3-pack",
             "img": "./img/cardapio/pizzas/detroit-style-pizza-choose-your-own-3-pack.6b6f4909ffd4066d5471e70eac5c3d89.jpg",
-            "name": "Emmy Squared",
+            "name": "X FRANGO EGG BACON",
             "dsc": "Detroit-Style Pizza - Choose Your Own 3 Pack",
             "price": 89
         },
         {
             "id": "brooklyn-pizza-choose-your-own-5-pack",
             "img": "./img/cardapio/pizzas/brooklyn-pizza-choose-your-own-5-pack.edc4f476a75207d0af840ce6f225f2b3.jpg",
-            "name": "Paesan's Pizza",
+            "name": "X FRANGO EGG BACON SALADA",
             "dsc": "Brooklyn Pizza - Choose Your Own 5 Pack",
             "price": 69
         },
         {
             "id": "choose-your-own-chicago-deep-dish-pizza-4-pack",
             "img": "./img/cardapio/pizzas/chicago-deep-dish-pizza-4-pack.49927daafa8c147fe9bb2a113e56668e.jpg",
-            "name": "My Pi Pizza",
+            "name": "X FRANGO TUDO",
             "dsc": "Chicago Deep Dish Pizza - 4 Pack",
             "price": 129
         },
-        {
-            "id": "4-lou-malnatis-deep-dish-pizzas",
-            "img": "./img/cardapio/pizzas/4-lou-malnatis-deep-dish-pizzas.8c79eb7506b5752ab3387d8174246b17.jpg",
-            "name": "Lou Malnati's Pizza",
-            "dsc": "4 Lou Malnati's Deep Dish Pizzas",
-            "price": 96.99
-        },
-        {
-            "id": "tonys-custom-pizza-3-pack",
-            "img": "./img/cardapio/pizzas/choose-your-own-pizza-3-pack.fcf7a43e38593007ef2857fe16d6dd26.jpg",
-            "name": "Tony's Pizza Napoletana",
-            "dsc": "Choose Your Own Pizza - 3 Pack",
-            "price": 99
-        },
-        {
-            "id": "plain-thin-crust-pizza-4-pack",
-            "img": "./img/cardapio/pizzas/plain-thin-crust-pizza-4-pack.5540e9d166db2f0853643c6517e4a225.jpg",
-            "name": "The Columbia Inn",
-            "dsc": "Plain Thin Crust Pizza - 4 Pack",
-            "price": 79
-        }
     ],
     "steaks": [
         {
