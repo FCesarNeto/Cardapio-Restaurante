@@ -69,9 +69,9 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one">
                             <div class="d-flex text-banner">
-                                <h1 class="wow fadeInLeft"><b>Escolha sua comida <b class="color-primary"> favorita.</b></b></h1>
+                                <h1 class="wow fadeInLeft"><b>Escolha seu Lanche <b class="color-primary"> favorito.</b></b></h1>
                                 <p class="wow fadeInLeft delay-02s">
-                                    Aproveite nosso cardápio! Escolha o que desejar e recebe em sua casa de forma rápida e segura.
+                                    Aproveite nosso cardápio! Escolha o que desejar e aproveite.
                                 </p>
                                 <div class="wow fadeIn delay-05s">
                                     <a class="btn btn-yellow mt-4 mr-3">
@@ -88,10 +88,10 @@
                             <a href="https://www.instagram.com/quiosquelanchesmaissabor/" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeIn delay-05s">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.facebook.com/netocesar/" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeIn delay-05s">
+                            <a href="https://www.facebook.com/quiosquelanchesmaissabor/" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeIn delay-05s">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://wa.me/551499705-5683/" target="_blank" class="btn btn-sm btn-white btn-social mt-4 wow fadeIn delay-05s">
+                            <a href="https://api.whatsapp.com/send?phone=5514997055683" target="_blank" class="btn btn-sm btn-white btn-social mt-4 wow fadeIn delay-05s">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
@@ -102,8 +102,8 @@
                             </div>
                             <div class="card card-case wow fadeInRight delay-07s">
                                 "Entrega rápida e funcionarios simpáticos."
-                                <br>A comida chegou quente e <br>
-                                muito saborosa!"
+                                <br>O lanche chegou quente e <br>
+                                muito saboroso!"
                                 <span class="card-case-name">
                                     <b>Thiago Lopes</b>
                                 </span>
@@ -183,7 +183,7 @@
                             <a id="menu-burgers" class="btn btn-white btn-sm mr-3 active" onclick="cardapio.metodos.obterItensCardapio('burgers')">
                                 <i class="fas fa-hamburger"></i>&nbsp; Hamburguer
                             </a>
-                            <a  id="menu-pizzas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('pizzas')">
+                            <a  id="menu-pizzas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('frango')">
                                 <i class="fas fa-pizza-slice"></i>&nbsp; Frango
                             </a>
                             <a  id="menu-churrasco" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('churrasco')">
@@ -303,7 +303,7 @@
                                         <i class="fas fa-quote-left"></i>
                                         <span>
                                             O lanche estava excelente e o serviço gentil nos surpreendeu!
-                                            Dica: Peça umas 3 horas para ter uma experiencia incrível. 
+                                            Dica: Peça cedo para ter uma experiencia incrível. 
                                         </span>
                                         <i class="fas fa-quote-right"></i>
                                     </p>
@@ -373,13 +373,13 @@
                         </div>
 
                         <div class="col-12 col-lg-3 col-md-3 col-sm-12 col-one container-redes-footer wow fadeIn">
-                            <a href="https://www.instagram.com/net0xx/" target="_blank"class="btn btn-sm btn-white btn-social mr-3">
+                            <a href="https://www.instagram.com/quiosquelanchesmaissabor/" target="_blank"class="btn btn-sm btn-white btn-social mr-3">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://www.facebook.com/netocesar/" target="_blank" class="btn btn-sm btn-white btn-social mr-3">
+                            <a href="https://www.facebook.com/quiosquelanchesmaissabor/" target="_blank" class="btn btn-sm btn-white btn-social mr-3">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://wa.me/5514997055683/" target="_blank" class="btn btn-sm btn-white btn-social">
+                            <a href="https://api.whatsapp.com/send?phone=5514997055683" target="_blank" class="btn btn-sm btn-white btn-social">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </div>
@@ -565,7 +565,7 @@
                                 <span id="lblSubTotal">R$ 0,00</span>
                             </p>
                             <p class="mb-o texto-entrega">
-                                <span><i class="fas fa-motorcycle"></i> Entrega:</span>
+                                <span><i class="fas fa-motorcycle" id="moto" style="padding-right: 5px;"></i><strong>Entrega:</strong></span>
                                 <span id="lblValorEntrega">+ R$ 0,00</span>
                             </p>
                             <p class="mb-o texto-total">
@@ -586,7 +586,7 @@
                         <a onclick="cardapio.metodos.voltarEtapa(2)" class="btn btn-white float-right hidden mr-3" id="btnVoltar">
                             Voltar 
                         </a>
-
+                        
                     </div>
                 </div>
             </div>

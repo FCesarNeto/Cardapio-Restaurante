@@ -8,7 +8,7 @@ var MEU_CARRINHO = [];
 var MEU_ENDERECO = null;    
 
 var VALOR_CARRINHO = 0;
-var VALOR_ENTREGA = 8;
+var VALOR_ENTREGA = "Consultar valores";
 
 var CELULAR_EMPRESA = '5514997055683';
 
@@ -312,7 +312,7 @@ cardapio.metodos = {
             VALOR_CARRINHO = 0;
 
             $("#lblSubTotal").text('R$ 0,00');
-            $("#lblValorEntrega").text('+ R$ 0,00');
+            $("#lblValorEntrega").text('Consultar valores');
             $("#lblValorTotal").text('R$ 0,00');
 
             $.each(MEU_CARRINHO, (i, e) => {

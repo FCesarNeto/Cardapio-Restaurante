@@ -90,64 +90,71 @@ var MENU = {
             "id": "the-gramercy-tavern-burger-4-pack",
             "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
             "name": "HAMBURGUER",
-            "dsc": "The Gramercy Tavern Burger - 4 Pack",
-            "price": 99
+            "dsc": "Pão e Hambruguer",
+            "price": 16
         },
         {
             "id": "shake-shack-shackburger-8-pack",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-8-pack.973a5e26836ea86d7e86a327becea2b0.jpg",
             "name": "X BURGUER",
-            "dsc": "Shake Shack ShackBurger® - 8 Pack",
-            "price": 49
+            "dsc": "Hamburguer e queijo.",
+            "price": 19
         },
         {
             "id": "gotts-cheeseburger-kit-for-4",
             "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
             "name": "X SALADA",
-            "dsc": "Gott's Complete Cheeseburger Kit for 4",
-            "price": 99
+            "dsc": "Hamburguer, queijo e salada.",
+            "price": 21
         },
         {
             "id": "le-big-matt-kit-for-6",
             "img": "./img/cardapio/burguers/le-big-matt-kit-for-6.1ddae6e382bb3218eeb0fd5247de115a.jpg",
             "name": "X BACON SALADA",
-            "dsc": "Le Big Matt Burger Kit for 6",
-            "price": 99
+            "dsc": "Hamburguer, queijo, bacon e salada.",
+            "price": 28
         },
         {
             "id": "shake-shack-shackburger-16-pack",
             "img": "./img/cardapio/burguers/shake-shack-shackburger-16-pack.316f8b09144db65931ea29e34869287a.jpg",
             "name": "X EG",
-            "dsc": "Shake Shack Shackburger® - 16 Pack",
-            "price": 89
+            "dsc": "Hamburguer, queijo e ovo.",
+            "price": 23
         },
         {
             "id": "21-usda-prime-burgers-pack-of-18-8oz-each",
             "img": "./img/cardapio/burguers/usda-prime-burgers-pack-of-18-8oz-each.274c67f15aa1c0b210dbf51801706670.jpg",
-            "name": "x EG BACON",
-            "dsc": "USDA Prime Burgers - Pack of 18 (8oz each)",
-            "price": 175.95
+            "name": "X EG SALADA",
+            "dsc": "Hamburguer, queijo, ovo e salada",
+            "price": 25
         },
         {
             "id": "double-stack-burger-kit-for-4",
             "img": "./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg",
-            "name": "X EG BACON SALADA",
-            "dsc": "Double Stack Burger Kit for 4",
-            "price": 79
+            "name": "X EG BACON",
+            "dsc": "Hamburguer, queijo, ovo e bacon",
+            "price": 27
         },
         {
             "id": "goldbelly-burger-bash-pack",
             "img": "./img/cardapio/burguers/the-burger-bash-package.bd9d12d031865940bbe5faf15f1a62f8.jpg",
+            "name": "X EG BACON SAL",
+            "dsc": "Hamburguer, queijo, bacon e salada",
+            "price": 29
+        },
+        {
+            "id": "burger-au-poivre-kit-4-pack",
+            "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
             "name": "X TUDO",
-            "dsc": "Goldbelly \"Burger Bash\" Pack",
-            "price": 109
+            "dsc": "Hamburguer, bacon, queijo, ovo, calabresa, presunto e salada",
+            "price": 34
         },
         {
             "id": "burger-au-poivre-kit-4-pack",
             "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
             "name": "X MAIS SABOR",
-            "dsc": "Burger Au Poivre Kit - 4 Pack",
-            "price": 99
+            "dsc": "Hamburguer, bacon, queijo, ovo, calabresa, presunto, frango, catupiry e salada",
+            "price": 40
         },
     ],
     "sobremesas": [
@@ -322,7 +329,7 @@ var MENU = {
             "price": 40
         }
     ],
-    "pizzas": [
+    "frango": [
         {
             "id": "2-lou-malnatis-deep-dish-pizzas",
             "img": "./img/cardapio/pizzas/2-lou-malnatis-deep-dish-pizzas.bf0fe065d251a9cca3925b269d443a27.jpg",
