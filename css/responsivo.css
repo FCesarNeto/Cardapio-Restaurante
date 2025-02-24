@@ -18,6 +18,10 @@
 /* Tablet e cel (col) 0px a 767px */
 @media (max-width: 767px) {
 
+    * {
+        box-sizing: border-box;
+    }
+
     .no-mobile {
         display: none!important;
     }
@@ -51,8 +55,10 @@
     }
 
     .banner {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        width: 100%;
+        max-width: 1200px;
     }
 
     .text-banner h1 {
@@ -160,6 +166,12 @@
         margin-top: 20px;
         margin-bottom: 50px;
         justify-content: center;
+    }
+
+    .container-logo-footer, .container-texto-footer, .container-redes-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .modal-full {
