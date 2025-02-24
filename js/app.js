@@ -478,12 +478,9 @@ cardapio.metodos = {
         finalizarPedido: () => {
             if (MEU_CARRINHO.length > 0 && MEU_ENDERECO != null) {
                 let totalPedido = VALOR_CARRINHO;
-                if (!MEU_ENDERECO.retirarPedido) {
-                    totalPedido += VALOR_ENTREGA; // Só soma se não for retirada
-                }
         
                 let texto = 'Olá! Gostaria de fazer um pedido:';
-                texto += `\n*Itens do pedido:*\n\n\${itens}`;
+                texto += `\n*Itens do pedido:*\n\n`;
         
                 if (MEU_ENDERECO.retirarPedido) {
                     texto += `\n*Vou retirar meu pedido.*`;
@@ -496,22 +493,22 @@ cardapio.metodos = {
                 texto += `\n\n*Total: R$ ${totalPedido.toFixed(2).replace('.', ',')}*`;
         
                 let itens = '';
-        
+                
+                // Preencher os itens e depois substituir o marcador
                 $.each(MEU_CARRINHO, (i, e) => {
                     itens += `*${e.qntd}x* ${e.name} ....... R$ ${e.price.toFixed(2).replace('.', ',')} \n`;
-        
-                    if ((i + 1) == MEU_CARRINHO.length) {
-                        texto = texto.replace(/\${itens}/g, itens);
-        
-                        console.log(texto);
-        
-                        // Converte a URL
-                        let encode = encodeURI(texto);
-                        let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
-        
-                        $("#btnEtapaResumo").attr('href', URL);
-                    }
                 });
+        
+                // Substitui o marcador '${itens}' com os itens do pedido
+                texto = texto.replace(/\${itens}/g, itens);
+        
+                console.log(texto);
+        
+                // Converte a URL
+                let encode = encodeURI(texto);
+                let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+        
+                $("#btnEtapaResumo").attr('href', URL);
             }
         },
         
