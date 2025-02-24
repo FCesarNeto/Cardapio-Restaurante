@@ -74,70 +74,70 @@ var MENU = {
     "burgers": [
         {
             "id": "the-gramercy-tavern-burger-4-pack",
-            "img": "./img/cardapio/burguers/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg",
+            "img": "./img/cardapio/burguers/att.webp",
             "name": "HAMBURGUER",
             "dsc": "Pão e Hambruguer",
             "price": 16
         },
         {
             "id": "shake-shack-shackburger-8-pack",
-            "img": "./img/cardapio/burguers/shake-shack-shackburger-8-pack.973a5e26836ea86d7e86a327becea2b0.jpg",
+            "img": "./img/cardapio/burguers/att.webp",
             "name": "X BURGUER",
             "dsc": "Hamburguer e queijo.",
             "price": 19
         },
         {
             "id": "gotts-cheeseburger-kit-for-4",
-            "img": "./img/cardapio/burguers/gotts-complete-cheeseburger-kit-for-4.7bdc74104b193427b3fe6eae39e05b5e.jpg",
+            "img": "./img/cardapio/burguers/att.webp",
             "name": "X SALADA",
             "dsc": "Hamburguer, queijo e salada.",
             "price": 21
         },
         {
             "id": "le-big-matt-kit-for-6",
-            "img": "./img/cardapio/burguers/le-big-matt-kit-for-6.1ddae6e382bb3218eeb0fd5247de115a.jpg",
+            "img": "./img/cardapio/burguers/att.webp",
             "name": "X BACON SALADA",
             "dsc": "Hamburguer, queijo, bacon e salada.",
             "price": 28
         },
         {
             "id": "shake-shack-shackburger-16-pack",
-            "img": "./img/cardapio/burguers/shake-shack-shackburger-16-pack.316f8b09144db65931ea29e34869287a.jpg",
+            "img": "./img/cardapio/burguers/att.webp",
             "name": "X EG",
             "dsc": "Hamburguer, queijo e ovo.",
             "price": 23
         },
         {
             "id": "21-usda-prime-burgers-pack-of-18-8oz-each",
-            "img": "./img/cardapio/burguers/usda-prime-burgers-pack-of-18-8oz-each.274c67f15aa1c0b210dbf51801706670.jpg",
+            "img": "./img/cardapio/burguers/att.webp",
             "name": "X EG SALADA",
             "dsc": "Hamburguer, queijo, ovo e salada",
             "price": 25
         },
         {
             "id": "double-stack-burger-kit-for-4",
-            "img": "./img/cardapio/burguers/handf-double-stack-burger-kit-for-4.4ee9f54b1d6087e9996335f07c13e5cd.jpg",
+            "img": "./img/cardapio/burguers/att.webp",
             "name": "X EG BACON",
             "dsc": "Hamburguer, queijo, ovo e bacon",
             "price": 27
         },
         {
             "id": "goldbelly-burger-bash-pack",
-            "img": "./img/cardapio/burguers/the-burger-bash-package.bd9d12d031865940bbe5faf15f1a62f8.jpg",
+            "img": "./img/cardapio/burguers/att.webp",
             "name": "X EG BACON SAL",
             "dsc": "Hamburguer, queijo, bacon e salada",
             "price": 29
         },
         {
             "id": "burger-au-poivre-kit-4-pack",
-            "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
+            "img": "./img/cardapio/burguers/att.webp",
             "name": "X TUDO",
             "dsc": "Hamburguer, bacon, queijo, ovo, calabresa, presunto e salada",
             "price": 34
         },
         {
             "id": "burger-au-poivre-kit-4-pack",
-            "img": "./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg",
+            "img":"./img/cardapio/burguers/att.webp",
             "name": "X MAIS SABOR",
             "dsc": "Hamburguer, bacon, queijo, ovo, calabresa, presunto, frango, catupiry e salada",
             "price": 40
@@ -255,63 +255,63 @@ var MENU = {
     "frango": [
         {
             "id": "2-lou-malnatis-deep-dish-pizzas",
-            "img": "./img/cardapio/pizzas/2-lou-malnatis-deep-dish-pizzas.bf0fe065d251a9cca3925b269d443a27.jpg",
+            "img": "./img/cardapio/pizzas/frango.webp",
             "name": "X FRANGO",
             "dsc": "2 Lou Malnati's Deep Dish Pizzas",
             "price": 23
         },
         {
             "id": "23699-choose-your-own-thin-crust-pizza-4-pack",
-            "img": "./img/cardapio/pizzas/choose-your-own-thin-crust-pizza-4-pack.b928a2008eab50c65dc87e59b5952190.jpg",
+            "img": "./img/cardapio/pizzas/frango.webp",
             "name": "X FRANGO SALADA",
             "dsc": "Choose Your Own Thin Crust Pizza - 4 Pack",
             "price": 25
         },
         {
             "id": "choose-your-own-new-haven-style-pizza-6-pack",
-            "img": "./img/cardapio/pizzas/choose-your-own-new-haven-style-pizza-6-pack.ab82828afc6172cdd4017556c15e36dd.jpg",
+            "img": "./img/cardapio/pizzas/frango.webp",
             "name": "X FRANGO BACON",
             "dsc": "New Haven-Style Pizza - 6 Pack (Choose Your Own)",
             "price": 28
         },    
         {
             "id": "6-lou-malnatis-deep-dish-pizzas",
-            "img": "./img/cardapio/pizzas/6-lou-malnatis-deep-dish-pizzas.f59993181da5d295668c8a6fb856055e.jpg",
+            "img": "./img/cardapio/pizzas/frango.webp",
             "name": "X FRANGO BC SALADA",
             "dsc": "6 Lou Malnati's Deep Dish Pizzas",
             "price": 30
         },
         {
             "id": "wood-fired-pizzas-best-seller-4-pack",
-            "img": "./img/cardapio/pizzas/wood-fired-pizzas-best-seller-4-pack.1653bb05922ba153ac178f8365d27f6d.jpg",
+            "img": "./img/cardapio/pizzas/frango.webp",
             "name": "X FRANGO EGG",
             "dsc": "Wood Fired Pizzas Best Seller - 4 Pack",
             "price": 25
         },
         {
             "id": "236991-choose-your-own-deep-dish-pizza-3-pack",
-            "img": "./img/cardapio/pizzas/choose-your-own-deep-dish-pizza-3-pack.4111791511244a4946bb5c9ad2c17da9.jpg",
+            "img": "./img/cardapio/pizzas/frango.webp",
             "name": "X FRANGO EGG SALADA",
             "dsc": "Choose Your Own Deep Dish Pizza - 3 Pack",
             "price": 27
         },
         {
             "id": "choose-your-own-detroit-style-pizza-3-pack",
-            "img": "./img/cardapio/pizzas/detroit-style-pizza-choose-your-own-3-pack.6b6f4909ffd4066d5471e70eac5c3d89.jpg",
+            "img": "./img/cardapio/pizzas/frango.webp",
             "name": "X FRANGO EGG BACON",
             "dsc": "Detroit-Style Pizza - Choose Your Own 3 Pack",
             "price": 30
         },
         {
             "id": "brooklyn-pizza-choose-your-own-5-pack",
-            "img": "./img/cardapio/pizzas/brooklyn-pizza-choose-your-own-5-pack.edc4f476a75207d0af840ce6f225f2b3.jpg",
+            "img": "./img/cardapio/pizzas/frango.webp",
             "name": "X FRANGO EGG BACON SALADA",
             "dsc": "Brooklyn Pizza - Choose Your Own 5 Pack",
             "price": 32
         },
         {
             "id": "choose-your-own-chicago-deep-dish-pizza-4-pack",
-            "img": "./img/cardapio/pizzas/chicago-deep-dish-pizza-4-pack.49927daafa8c147fe9bb2a113e56668e.jpg",
+            "img": "./img/cardapio/pizzas/frango.webp",
             "name": "X FRANGO TUDO",
             "dsc": "Chicago Deep Dish Pizza - 4 Pack",
             "price": 36
