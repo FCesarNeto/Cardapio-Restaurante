@@ -1,45 +1,50 @@
-
 /* Desktop (col-lg) 992px+ */
 @media (min-width: 992px) {
-
-
+    /* Aqui você pode adicionar estilos específicos para telas grandes */
 }
+
 /* Desktop e Tablet (col-md) 768px a 991px */
 @media (min-width: 768px) and (max-width: 991px) {
-
-
+    /* Ajustes para dispositivos entre 768px e 991px */
 }
+
 /* Tablet (col-sm) 576px a 767px */
 @media (min-width: 576px) and (max-width: 767px) {
-
-
+    /* Ajustes para tablets */
 }
 
-/* Tablet e cel (col) 0px a 767px */
+/* Tablet e celular (col) 0px a 767px */
 @media (max-width: 767px) {
-
     * {
         box-sizing: border-box;
     }
 
+    /* Esconde elementos com a classe 'no-mobile' */
     .no-mobile {
         display: none!important;
     }
 
     .col-one {
-        padding-left: 35px!important;
-        padding-right: 3px!important;
+        padding-left: 15px!important; /* Reduzi o padding para evitar quebra */
+        padding-right: 15px!important;
     }
 
+    /* Ajustes no navbar */
     .navbar-toggler-icon {
-        padding-top: 5px;
+        padding-top: 10px; /* Melhorar o espaçamento */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Faz os itens do menu se empilharem verticalmente */
+        text-align: center;
     }
 
     .navbar-collapse {
-        background-color: var( --color-secondary);
+        background-color: var(--color-secondary);
         padding: 20px;
         text-align: center;
-        border-radius: 40px;
+        border-radius: 20px; /* Reduzido para um arredondamento mais suave */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar */
     }
 
     .navbar-collapse .btn-white {
@@ -47,79 +52,85 @@
     }
 
     .navbar-collapse .btn-icon {
-        padding-right: 20px;
+        padding-right: 10px;
     }
 
     .navbar-collapse .btn-icon span.icon {
-        display: none;
+        display: none; /* Esconde o ícone do botão em telas pequenas */
+    }
+
+    .img-logo {
+        width: 100%;
+        max-width: 300px; /* Ajustado para ficar proporcional em telas pequenas */
+        display: block;
+        margin: 0 auto;
     }
 
     .banner {
-        padding-top: 10%;
-        padding-bottom: 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
         width: 100%;
-        max-width: 1200px;
     }
 
     .text-banner h1 {
-        font-size: 36px;
+        font-size: 30px; /* Ajustado para telas menores */
     }
 
     .text-banner p {
-        font-size: 18px;
+        font-size: 16px; /* Ajustado para não quebrar o layout */
     }
 
     .btn-yellow, .btn-white {
-        padding: 13px 23px;
-        font-size: 18px;
+        padding: 12px 20px; /* Ajustado o padding para telas menores */
+        font-size: 16px;
     }
 
     .btn-icon-left span.icon-left {
-        width: 43px;
-        height: 43px;
-        margin-left: -56px;
+        width: 35px;
+        height: 35px;
+        margin-left: -45px;
     }
 
     .btn-icon-left {
-        padding-left: 63px;
+        padding-left: 50px;
     }
 
     .title {
-        font-size: 30px;
+        font-size: 26px; /* Reduzido para telas pequenas */
     }
 
-    .servicos {
-        padding-bottom: 50px;
-    }
-
-    .cardapio {
-        padding-bottom: 50px;
+    .servicos, .cardapio, .depoimentos, .reserva {
+        padding-bottom: 30px; /* Ajustado para espaçamento mais adequado */
     }
 
     .container-menu {
         overflow-x: auto;
         overflow-y: hidden;
         display: flex;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
         margin-left: 5px;
     }
 
     .img-produto {
         position: absolute;
-        left: 15px;
+        left: 10px; /* Ajustado para um espaçamento mais fino */
+        margin-right: 10px; 
     }
 
     .card-item {
-        height: 110px;
-        padding-left: 110px;
+        height: 120px;
+        padding-left: 90px;
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: start;
+        align-items: flex-start;
     }
 
     .card-item .img-produto img {
-        width: 80px;
+        width: 70px;
     }
-    
+
     .title-produto {
         margin-top: 0px!important;
         height: 30px!important;
@@ -130,42 +141,15 @@
     .price-produto {
         margin-bottom: 0px!important;
         margin-top: 0px!important;
-        font-size: 22px!important;
+        font-size: 20px!important;
     }
 
     .card-item .add-carrinho {
         margin-top: 5px;
     }
-    
+
     #itensCardapio .mb-5 {
         margin-bottom: 15px;
-    }
-    
-    .depoimentos {
-        padding-bottom: 50px;
-    }
-
-    .reserva {
-        padding-bottom: 50px;
-    }
-
-    .card-secondary {
-        padding: 45px;
-        border-radius: 50px;
-    }
-    
-    .container-logo-footer {
-        justify-content: center;
-    }
-
-    .container-texto-footer p {
-        text-align: center;
-    }
-
-    .container-redes-footer {
-        margin-top: 20px;
-        margin-bottom: 50px;
-        justify-content: center;
     }
 
     .container-logo-footer, .container-texto-footer, .container-redes-footer {
@@ -174,40 +158,29 @@
         align-items: center;
     }
 
+    .container-texto-footer p {
+        text-align: center;
+    }
+
     .modal-full {
-        padding: 40px;
+        padding: 30px;
     }
 
     .modal-full .item-carrinho {
         padding-left: 0;
         padding-right: 0;
     }
-    
+
     .modal-full .img-produto {
         position: relative;
         left: 0;
     }
 
     .modal-full .img-produto img {
-        width: 50px;
+        width: 45px;
     }
 
     .modal-full .dados-produto {
-        padding-left: 15px;
-        padding-right: 15px;
-        display: grid;
-    }
-    
-    .modal-full .title-produto, .modal-full .price-produto {
-        font-size: 16px!important;
-    }
-
-    .modal-full .add-numero-itens {
-        padding: 2px 10px;
-    }
-
-    .modal-full .form-control {
-        font-size: 16px;
+        padding-left: 10px;
     }
 }
-

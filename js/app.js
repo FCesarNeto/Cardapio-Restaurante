@@ -19,6 +19,25 @@ cardapio.eventos = {
         cardapio.metodos.carregarBotaoReserva();
         cardapio.metodos.carregarBotaoLigar();
         cardapio.metodos.carregarBotaoWhatsApp();
+
+        // Evento para habilitar/desabilitar os campos de endereço ao marcar "Retirar no local"
+    $("#retirada").change(function () {
+        const desabilitar = $(this).is(":checked");
+
+        $("#txtCEP").prop("disabled", desabilitar);
+        $("#txtEndereco").prop("disabled", desabilitar);
+        $("#txtBairro").prop("disabled", desabilitar);
+        $("#txtCidade").prop("disabled", desabilitar);
+        $("#ddlUf").prop("disabled", desabilitar);
+        $("#txtNumero").prop("disabled", desabilitar);
+        $("#txtComplemento").prop("disabled", desabilitar);
+
+        if (desabilitar) {
+            // Se marcado para retirada, limpa os campos
+            $("#txtCEP, #txtEndereco, #txtBairro, #txtCidade, #ddlUf, #txtNumero, #txtComplemento").val('');
+        }
+    });
+
     }
 }
 
@@ -157,7 +176,7 @@ cardapio.metodos = {
     },
 
     //abrir modal de carrinho
-    
+
     abrirCarrinho: (abrir) => {
 
         if (abrir) {
@@ -388,16 +407,21 @@ cardapio.metodos = {
         
         // validacao antes de prosseguir para a etapa 3
         resumoPedido: () => {
-            let cep = $("#txtCEP").val().trim();
-            let endereco = $("#txtEndereco").val().trim();
-            let bairro = $("#txtBairro").val().trim();
-            let cidade = $("#txtCidade").val().trim();
-            let uf = $("#ddlUf").val().trim();
-            let numero = $("#txtNumero").val().trim();
-            let complemento = $("#txtComplemento").val().trim();
-            let retirarPedido = $("#retirada").is(":checked"); // Agora é booleano (true/false)
+            const retirarPedido = $("#retirada").is(":checked");
         
+            // Inicializa os dados como vazios
+            let cep = '', endereco = '', bairro = '', cidade = '', uf = '', numero = '', complemento = '';
+        
+            // Se NÃO for retirada, pega os dados dos campos e valida
             if (!retirarPedido) {
+                cep = $("#txtCEP").val().trim();
+                endereco = $("#txtEndereco").val().trim();
+                bairro = $("#txtBairro").val().trim();
+                cidade = $("#txtCidade").val().trim();
+                uf = $("#ddlUf").val().trim();
+                numero = $("#txtNumero").val().trim();
+                complemento = $("#txtComplemento").val().trim();
+        
                 if (!cep) {
                     cardapio.metodos.mensagem('Informe o CEP, por favor.');
                     $("#txtCEP").focus();
@@ -443,12 +467,12 @@ cardapio.metodos = {
                 uf,
                 numero,
                 complemento,
-                retirarPedido, // Agora é booleano (true/false)
+                retirarPedido
             };
         
             cardapio.metodos.carregarEtapa(3);
             cardapio.metodos.carregarResumo();
-        },
+        },        
         
         // carrega a etapa do resumo do pedido
         carregarResumo: () => {
@@ -582,8 +606,8 @@ cardapio.templates = {
                      <img src="\${img}"/>
                 </div>
                 <p class="title-produto text-center mt-4">
-                    <b>\${nome}</b>
-                    <b>\${dsc}</b>
+                    <b>\${nome}</b><br>
+                        \${dsc}
                 </p>
                 <p class="price-produto text-center">
                     <b>R$ \${preco}</b>
@@ -625,9 +649,9 @@ cardapio.templates = {
                                         </div>
                                         <div class="dados-produto">
                                             <p class="title-produto-resumo">
-                                                <b>\${nome}</b> -
-                                                <b>\${dsc}</b>
+                                                <b>\${nome}</b> 
                                             </p>
+                                             <b>\${dsc}</b>
                                             <p class="price-produto-resumo">
                                                 <b>R$\${preco}</b>
                                             </p>
