@@ -1,19 +1,14 @@
-/* Desktop (col-lg) 992px+ */
 @media (min-width: 992px) {
-    /* Aqui você pode adicionar estilos específicos para telas grandes */
+   /* Estilos específicos para desktops grandes podem ser inseridos aqui */
 }
-
-/* Desktop e Tablet (col-md) 768px a 991px */
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Ajustes para dispositivos entre 768px e 991px */
+    /* Ajustes específicos para dispositivos médios (tablets e notebooks menores) */
 }
-
-/* Tablet (col-sm) 576px a 767px */
 @media (min-width: 576px) and (max-width: 767px) {
-    /* Ajustes para tablets */
+      /* Estilos para tablets pequenos e celulares maiores */
 }
 
-/* Tablet e celular (col) 0px a 767px */
+/* Monile 0px a 767px */
 @media (max-width: 767px) {
     * {
         box-sizing: border-box;
@@ -21,7 +16,7 @@
 
     /* Esconde elementos com a classe 'no-mobile' */
     .no-mobile {
-        display: none!important;
+        display: none!important; /*Esconde elementos em dispositivos móveis*/
     }
 
     .col-one {
@@ -152,10 +147,13 @@
         margin-bottom: 15px;
     }
 
-    .container-logo-footer, .container-texto-footer, .container-redes-footer {
+    .container-logo-footer, 
+    .container-texto-footer, 
+    .container-redes-footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 10px;
     }
 
     .container-texto-footer p {
@@ -169,11 +167,14 @@
     .modal-full .item-carrinho {
         padding-left: 0;
         padding-right: 0;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .modal-full .img-produto {
         position: relative;
         left: 0;
+        margin-bottom: 10px;
     }
 
     .modal-full .img-produto img {

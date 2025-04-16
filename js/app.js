@@ -84,13 +84,13 @@ cardapio.metodos = {
 
     // clique no botao de ver mais
     verMais: () => {
-
-        var ativo = $(".container-menu a.active").attr('id').split('menu-')[1]; 
-        cardapio.metodos.obterItensCardapio(ativo, true);
-
+        var categoriaAtiva = $(".container-menu a.active").attr('id').split('menu-')[1];
+        cardapio.metodos.obterItensCardapio(categoriaAtiva, true);
+    
+        // Esconde o botão "Ver Mais" após carregar mais itens
         $("#btnVerMais").addClass('hidden');
-
     },
+    
     
     //diminuir a quantidade do item no cardapio
     diminuirQuantidade: (id) => {
@@ -113,46 +113,33 @@ cardapio.metodos = {
 
     //adicionar ao carrinho o item do cardápio
     adicionarAoCarrinho: (id) => {
-
         let qntdAtual = parseInt($("#qntd-" + id).text());
-
+    
         if (qntdAtual > 0) {
-            
-            //obter categoria ativa
-            var categoria = $(".container-menu a.active").attr('id').split('menu-')[1]; 
-
-            // obtem a lista de itens
-            let filtro = MENU[categoria];
-
-            // obtem o item
-            let item = $.grep(filtro, (e, i) => { return e.id == id });
-
-            if (item.length > 0) {
-
-                //validar se ja existe esse item no carrinho
-                
-                let existe = $.grep(MEU_CARRINHO, (elem, index) => { return elem.id == id });
-
-                //caso ja exista so altera a qntd
-                if (existe.length > 0) {
-                    let objIndex = MEU_CARRINHO.findIndex((obj => obj.id == id));
-                    MEU_CARRINHO[objIndex].qntd = MEU_CARRINHO[objIndex].qntd + qntdAtual;
+            // Obtém a categoria ativa
+            var categoria = $(".container-menu a.active").attr('id').split('menu-')[1];
+    
+            // Obtém o item correspondente na categoria ativa
+            let item = MENU[categoria].find(e => e.id == id);
+    
+            if (item) {
+                // Verifica se o item já está no carrinho
+                let carrinhoItem = MEU_CARRINHO.find(elem => elem.id == id);
+    
+                if (carrinhoItem) {
+                    carrinhoItem.qntd += qntdAtual; // Atualiza a quantidade
+                } else {
+                    item.qntd = qntdAtual; // Adiciona novo item
+                    MEU_CARRINHO.push(item);
                 }
-                
-                //caso ainda não exista no carrinho, adiciona ele 
-                else {
-                    item[0].qntd = qntdAtual
-                    MEU_CARRINHO.push(item[0])
-                }
-
-                cardapio.metodos.mensagem('Item adicionado ao carrinho', 'green')
+    
+                cardapio.metodos.mensagem('Item adicionado ao carrinho', 'green');
                 $("#qntd-" + id).text(0);
-
+    
                 cardapio.metodos.atualizarBadgeTotal();
-
             }
-        } 
-    },
+        }
+    },    
     //atualiza o badge de totais dos botoes Meu carrinho
     atualizarBadgeTotal: () => {
 
