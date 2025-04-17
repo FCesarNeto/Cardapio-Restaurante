@@ -196,6 +196,7 @@ a.navbar-brand {
     border: none!important; 
 }
 
+
 .card-case {
     width: 350px;
     font-size: 14px;
@@ -279,12 +280,22 @@ a.navbar-brand {
  }
 
  .card-item {
-    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* garante que o card tenha altura total */
+ }
+
+ .card-item .price-produto {
+    color: var(--color-primary);
+    font-size: 24px;
+    margin-top: auto; /* JOGA PRA BAIXO */
  }
 
  .card-item .img-produto img {
     width: 100%;
     border-radius: 11px;
+    margin-bottom: 2px;
  }
 
  .card-item .title-produto {
@@ -293,12 +304,12 @@ a.navbar-brand {
     white-space: nowrap;
     overflow: hidden;
     height: 40px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
  }
 
- .card-item .price-produto {
-    color: var(--color-primary);
-    font-size: 24px;
+ .card-item .dsc-produto {
+    position: relative;
+    margin-top: 0;
  }
 
  .card-item .add-carrinho {

@@ -8,7 +8,6 @@ var MEU_CARRINHO = [];
 var MEU_ENDERECO = null;    
 
 var VALOR_CARRINHO = 0;
-var VALOR_ENTREGA = "Consultar valores";
 
 var CELULAR_EMPRESA = '5514997055683';
 
@@ -61,7 +60,7 @@ cardapio.metodos = {
             .replace(/\${dsc}/g, e.dsc)
             .replace(/\${preco}/g, e.price.toFixed(2).replace('.', ','))
             .replace(/\${id}/g, e.id)
-
+            
             //botão ver mais foi clicado (12 itens)
             if (vermais && i >= 8 && i < 12) {
                 $("#itensCardapio").append(temp)
@@ -248,6 +247,7 @@ cardapio.metodos = {
 
                     let temp = cardapio.templates.itemCarrinho.replace(/\${img}/g, e.img)
                     .replace(/\${nome}/g, e.name)
+                    .replace(/\${dsc}/g, e.dsc)  /* Adiciona descrição */
                     .replace(/\${preco}/g, e.price.toFixed(2).replace('.', ','))
                     .replace(/\${id}/g, e.id)
                     .replace(/\${qntd}/g, e.qntd)
@@ -317,6 +317,7 @@ cardapio.metodos = {
         carregarValores: () => {
 
             VALOR_CARRINHO = 0;
+            VALOR_ENTREGA = 0;
 
             $("#lblSubTotal").text('R$ 0,00');
             $("#lblValorEntrega").text('Consultar valores');
@@ -328,7 +329,7 @@ cardapio.metodos = {
 
                 if ((i + 1) == MEU_CARRINHO.length) {
                     $("#lblSubTotal").text(`R$ ${VALOR_CARRINHO.toFixed(2).replace('.', ',')}`);
-                    $("#lblValorEntrega").text(`+ R$ ${VALOR_ENTREGA.toFixed(2).replace('.', ',')}`);
+                    $("#lblValorEntrega").text('Consultar valores');
                     $("#lblValorTotal").text(`R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.', ',')}`);
                 }
 
@@ -466,8 +467,10 @@ cardapio.metodos = {
             $('#listaItensResumo').html('');
         
             $.each(MEU_CARRINHO, (i, e) => {
-                let temp = cardapio.templates.itemResumo.replace(/\${img}/g, e.img)
+                let temp = cardapio.templates.itemResumo
+                    .replace(/\${img}/g, e.img)
                     .replace(/\${nome}/g, e.name)
+                    .replace(/\${dsc}/g,   e.dsc)        
                     .replace(/\${preco}/g, e.price.toFixed(2).replace('.', ','))
                     .replace(/\${qntd}/g, e.qntd);
         
@@ -504,14 +507,14 @@ cardapio.metodos = {
                 texto += `\n\n*Total: R$ ${totalPedido.toFixed(2).replace('.', ',')}*`;
         
                 let itens = '';
-                
-                // Preencher os itens e depois substituir o marcador
+        
+                // Preencher os itens
                 $.each(MEU_CARRINHO, (i, e) => {
                     itens += `*${e.qntd}x* ${e.name} ....... R$ ${e.price.toFixed(2).replace('.', ',')} \n`;
                 });
         
-                // Substitui o marcador '${itens}' com os itens do pedido
-                texto = texto.replace(/\${itens}/g, itens);
+                // Adiciona os itens diretamente ao texto
+                texto += itens;
         
                 console.log(texto);
         
@@ -521,11 +524,10 @@ cardapio.metodos = {
         
                 $("#btnEtapaResumo").attr('href', URL);
             }
-        },
-        
+        },        
         // carrega o link do botao reserva
         carregarBotaoReserva: () => {
-            var texto = 'Olá, gostaria de fazer um pedido para retirada';
+            var texto = 'Olá, gostaria de fazer um pedido para retirada!';
 
             let encode = encodeURI(texto);
             let URL =  `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
@@ -593,9 +595,11 @@ cardapio.templates = {
                      <img src="\${img}"/>
                 </div>
                 <p class="title-produto text-center mt-4">
-                    <b>\${nome}</b><br>
-                        \${dsc}
+                    <b>\${nome}</b>
                 </p>
+                <p class="dsc-produto text-center">
+                    <b>\${dsc}</b>
+                </p>    
                 <p class="price-produto text-center">
                     <b>R$ \${preco}</b>
                 </p>
@@ -615,10 +619,7 @@ cardapio.templates = {
                         <img src="\${img}"/>
                     </div>
                     <div class="dados-produto">
-                        <p class="title-produto"><b>\${nome}</b></p>
-                        <p class="dsc-produto"><b>\${dsc}</b></p>
-                        <p class="price-produto"><b>R$ \${preco}</b></p>
-                        
+                        <p class="title-produto"><b>\${nome}<br>\${dsc}</b></p>
                     </div>
                     <div class="add-carrinho">
                          <span class="btn-menos" onclick="cardapio.metodos.diminuirQuantidadeCarrinho('\${id}')"><i class="fas fa-minus"></i></span>
