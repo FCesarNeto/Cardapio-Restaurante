@@ -116,10 +116,9 @@
         height: 120px;
         padding-left: 90px;
         padding-right: 15px;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        justify-content: start;
+        align-items: start;
     }
 
     .card-item .img-produto img {

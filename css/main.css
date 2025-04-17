@@ -280,10 +280,12 @@ a.navbar-brand {
  }
 
  .card-item {
+    min-height: 180px; /* ou ajuste conforme o tamanho que quiser */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* garante que o card tenha altura total */
+    line-height: 1.4;
+    text-wrap: balance; /* Ajuda a distribuir melhor o texto */
  }
 
  .card-item .price-produto {
@@ -308,7 +310,6 @@ a.navbar-brand {
  }
 
  .card-item .dsc-produto {
-    position: relative;
     margin-top: 0;
  }
 
