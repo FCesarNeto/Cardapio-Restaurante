@@ -164,6 +164,7 @@
     }
 
     .modal-full .item-carrinho {
+        display: flex;
         padding-left: 0;
         padding-right: 0;
         flex-direction: column;
@@ -176,11 +177,10 @@
         margin-bottom: 10px;
     }
 
-    .modal-full .img-produto img {
-        width: 45px;
-    }
-
     .modal-full .dados-produto {
-        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        margin-bottom: 10px;
     }
 }

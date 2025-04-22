@@ -301,7 +301,7 @@ a.navbar-brand {
  }
 
  .card-item .title-produto {
-    color: var(--color-black);
+    color: var(--color-primary);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;

@@ -495,17 +495,6 @@ cardapio.metodos = {
         
                 let texto = 'Olá! Gostaria de fazer um pedido:';
                 texto += `\n*Itens do pedido:*\n\n`;
-        
-                if (MEU_ENDERECO.retirarPedido) {
-                    texto += `\n*Vou retirar meu pedido.*`;
-                } else {
-                    texto += `\n*Endereço de entrega:*`;
-                    texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`;
-                    texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
-                }
-        
-                texto += `\n\n*Total: R$ ${totalPedido.toFixed(2).replace('.', ',')}*`;
-        
                 let itens = '';
         
                 // Preencher os itens
@@ -515,8 +504,16 @@ cardapio.metodos = {
         
                 // Adiciona os itens diretamente ao texto
                 texto += itens;
+               
+                texto += `\n\n*Total: R$ ${totalPedido.toFixed(2).replace('.', ',')}*`;
         
-                console.log(texto);
+                if (MEU_ENDERECO.retirarPedido) {
+                    texto += `\n*Vou retirar meu pedido.*`;
+                } else {
+                    texto += `\n*Endereço de entrega:*`;
+                    texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`;
+                    texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
+                }
         
                 // Converte a URL
                 let encode = encodeURI(texto);
