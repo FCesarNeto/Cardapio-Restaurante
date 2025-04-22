@@ -492,19 +492,15 @@ cardapio.metodos = {
         finalizarPedido: () => {
             if (MEU_CARRINHO.length > 0 && MEU_ENDERECO != null) {
                 let totalPedido = VALOR_CARRINHO;
-        
-                let texto = 'Olá! Gostaria de fazer um pedido:';
+             let texto = 'Olá! Gostaria de fazer um pedido:';
                 texto += `\n*Itens do pedido:*\n\n`;
                 let itens = '';
-        
                 // Preencher os itens
                 $.each(MEU_CARRINHO, (i, e) => {
                     itens += `*${e.qntd}x* ${e.name} ....... R$ ${e.price.toFixed(2).replace('.', ',')} \n`;
                 });
-        
                 // Adiciona os itens diretamente ao texto
                 texto += itens;
-               
                 texto += `\n\n*Total: R$ ${totalPedido.toFixed(2).replace('.', ',')}*`;
         
                 if (MEU_ENDERECO.retirarPedido) {

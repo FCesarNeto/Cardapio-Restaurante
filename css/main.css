@@ -739,6 +739,10 @@ select.form-control {
     border-radius: 11px;
 }
 
+#retirada {
+    color: red;
+}
+
 .texto-endereco {
     margin-bottom: 0;
     color: var(--color-black);
