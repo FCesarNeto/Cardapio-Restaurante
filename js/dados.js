@@ -73,70 +73,70 @@ var MENU = {
     ],
     "burgers": [
         {
-            "id": "the-gramercy-tavern-burger-4-pack",
+            "id": "hamburguer",
             "img": "./img/cardapio/burguers/burguer2.png",
             "name": "HAMBURGUER",
             "dsc": "Pão e Hamburguer",
             "price": 16
         },
         {
-            "id": "shake-shack-shackburger-8-pack",
+            "id": "xburguer",
             "img": "./img/cardapio/burguers/burguer2.png",
             "name": "X BURGUER",
             "dsc": "Hamburguer e queijo.",
             "price": 19
         },
         {
-            "id": "gotts-cheeseburger-kit-for-4",
+            "id": "xsalada",
             "img": "./img/cardapio/burguers/burguer2.png",
             "name": "X SALADA",
             "dsc": "Hamburguer, queijo e salada.",
             "price": 21
         },
         {
-            "id": "le-big-matt-kit-for-6",
+            "id": "xbaconsalada",
             "img": "./img/cardapio/burguers/burguer2.png",
             "name": "X BACON SALADA",
             "dsc": "Hamburguer, queijo, bacon e salada.",
             "price": 28
         },
         {
-            "id": "shake-shack-shackburger-16-pack",
+            "id": "xeg",
             "img": "./img/cardapio/burguers/burguer2.png",
             "name": "X EG",
             "dsc": "Hamburguer, queijo e ovo.",
             "price": 23
         },
         {
-            "id": "21-usda-prime-burgers-pack-of-18-8oz-each",
+            "id": "xegsalada",
             "img": "./img/cardapio/burguers/burguer2.png",
             "name": "X EG SALADA",
             "dsc": "Hamburguer, queijo, ovo e salada",
             "price": 25
         },
         {
-            "id": "double-stack-burger-kit-for-4",
+            "id": "xegbacon",
             "img": "./img/cardapio/burguers/burguer2.png",
             "name": "X EG BACON",
             "dsc": "Hamburguer, queijo, ovo e bacon",
             "price": 27
         },
         {
-            "id": "goldbelly-burger-bash-pack",
+            "id": "xegbcsalada",
            "img": "./img/cardapio/burguers/burguer2.png",
             "name": "X EG BACON SAL",
             "dsc": "Hamburguer, queijo, bacon e salada",
             "price": 29
         },
         {
-            "id": "burger-au-poivre-kit-4-pack",
+            "id": "xtudo",
            "img": "./img/cardapio/burguers/burguer2.png",
             "name": "X TUDO",
             "dsc": "Hamburguer, bacon, queijo, ovo, calabresa, presunto e salada",
             "price": 34
         },
         {
-            "id": "burger-au-poivre-kit-4-pack",
+            "id": "maissabor",
             "img": "./img/cardapio/burguers/burguer2.png",
             "name": "X MAIS SABOR",
             "dsc": "Hamburguer, bacon, queijo, ovo, calabresa, presunto, frango, catupiry e salada",
