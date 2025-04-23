@@ -607,20 +607,24 @@ cardapio.templates = {
     `,
     
     itemCarrinho: `
-             <div class="col-12 item-carrinho">
+            <div class="col-12 item-carrinho">
                     <div class="img-produto">
                         <img src="\${img}"/>
                     </div>
                     <div class="dados-produto">
-                        <p class="title-produto"><b>\${nome}<br>\${dsc}</b></p>
+                        <p class="title-produto"><b>\${nome}</b></p>
+                        <p class="dsc-produto">\${dsc}</p>
                     </div>
+
+                <div class="botao-adc">  
                     <div class="add-carrinho">
                          <span class="btn-menos" onclick="cardapio.metodos.diminuirQuantidadeCarrinho('\${id}')"><i class="fas fa-minus"></i></span>
                          <span class="add-numero-itens" id="qntd-carrinho-\${id}">\${qntd}</span>
                          <span class="btn-mais" onclick="cardapio.metodos.aumentarQuantidadeCarrinho('\${id}')"><i class="fas fa-plus"></i></span>
                          <span class="btn btn-remove no-mobile" onclick="cardapio.metodos.removerItemCarrinho('\${id}')"><i class="fa fa-times"></i></span>
-                    </div>
-             </div>                   
+                    </div>            
+                </div>          
+            </div>     
      `,
      
      itemResumo: `
